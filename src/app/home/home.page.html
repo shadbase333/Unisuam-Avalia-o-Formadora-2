@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>🏠 Meu App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Boas-vindas -->
+  <section class="welcome">
+    <ion-icon name="rocket-outline" class="logo-icon"></ion-icon>
+    <h1>Bem-vindo ao App</h1>
+    <p>Explore as funcionalidades abaixo 🚀</p>
+  </section>
+
+  <!-- Cards de navegação -->
+  <section class="cards">
+    <ion-card class="card" button routerLink="/identificacao">
+      <ion-card-content>
+        <ion-icon name="person-circle-outline"></ion-icon>
+          <H3>👨‍🎓</H3>
+        <h3>Identificação</h3>
+        <p>Informações acadêmicas</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card" button routerLink="/dogs">
+      <ion-card-content>
+        <ion-icon name="paw-outline"></ion-icon>
+        <h3>🐶</h3>
+        <h3>Dog API</h3>
+        <p>Fotos aleatórias de cachorros</p>
+      </ion-card-content>
+    </ion-card>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    
+  </footer>
+</ion-content>

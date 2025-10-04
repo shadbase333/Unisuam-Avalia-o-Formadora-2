@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>👨‍🎓 Identificação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Card de Identificação -->
+  <ion-card class="identification-card">
+    <div class="photo-container">
+      <img 
+        src="assets/icon/20250728_105901.jpg" 
+        alt="Foto do aluno" 
+        class="student-photo"
+      />
+    </div>
+
+    <ion-card-header>
+      <ion-card-title>Jean Silva Aragão</ion-card-title>
+      <ion-card-subtitle>Desenvolvedor Mobile</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list lines="none" class="info-list">
+        <!-- Turma -->
+        <ion-item>
+          <ion-icon name="school" slot="start" color="primary"></ion-icon>
+          <ion-label>
+            <h3>Código de turma</h3>
+            <p>24104305</p>
+          </ion-label>
+        </ion-item>
+
+        <!-- Unidade -->
+        <ion-item>
+          <ion-icon name="business" slot="start" color="secondary"></ion-icon>
+          <ion-label>
+            <h3>Unidade</h3>
+            <p>CG1</p>
+          </ion-label>
+        </ion-item>
+
+        <!-- Horário -->
+        <ion-item>
+          <ion-icon name="time" slot="start" color="tertiary"></ion-icon>
+          <ion-label>
+            <h3>Horário</h3>
+            <p>8:30-11:00</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" routerLink="/dogs" color="success">
+    <ion-icon name="paw" slot="start"></ion-icon>
+    Ver API de Dogs
+  </ion-button>
+
+  <ion-button expand="block" routerLink="/" color="success">
+  <ion-icon name="paw" slot="start"></ion-icon>
+  Voltar para home
+</ion-button>
+
+</ion-content>

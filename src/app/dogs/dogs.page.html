@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>🐕 Dog API</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Fotos de Cachorros Aleatórios</ion-card-title>
+      <ion-card-subtitle>Dog CEO API</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button expand="block" (click)="carregarDog()" [disabled]="carregando">
+        <ion-spinner *ngIf="carregando"></ion-spinner>
+        {{ carregando ? 'Carregando...' : '🐕 Novo Cachorro' }}
+      </ion-button>
+
+      <div *ngIf="imagemDog" class="dog-container">
+        <div class="image-wrapper">
+          <img 
+            [src]="imagemDog" 
+            alt="Foto de cachorro"
+            class="dog-image"
+            (load)="onImageLoad()"
+            (error)="onImageError()">
+        </div>
+        
+        <ion-text color="success">
+          <p class="ion-text-center">Que fofura! 🥰</p>
+        </ion-text>
+      </div>
+
+      <div *ngIf="erro" class="erro">
+        <ion-text color="danger">
+          <p>Erro: {{ erro }}</p>
+        </ion-text>
+        <ion-button expand="block" fill="outline" (click)="carregarDog()">
+          Tentar Novamente
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-button expand="block" color="success" (click)="goToIdentificacao()">
+  <ion-icon name="paw" slot="start"></ion-icon>
+  Ver identificação
+</ion-button>
+
+<ion-button expand="block" color="success" (click)="goToHome()">
+  <ion-icon name="paw" slot="start"></ion-icon>
+  Voltar para home
+</ion-button>
+
+
+
+
+</ion-content>
